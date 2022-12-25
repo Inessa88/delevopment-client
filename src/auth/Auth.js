@@ -7,7 +7,7 @@ import {AppContext} from '../App';
 
 export const Auth = (props) =>{
     const [redirect, setRedirect] = useState(false);
-    const {token, setToken} = useContext(AppContext)
+    const {setToken} = useContext(AppContext)
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -29,7 +29,7 @@ export const Auth = (props) =>{
         }
         verify()
 
-    },[])
+    })
 
     return(
         redirect ? props.children : null

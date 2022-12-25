@@ -1,6 +1,6 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import jwt_decode from 'jwt-decode';
-import {Navigate, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { AppContext } from "../App";
 
 const Home = (props) => {
@@ -23,7 +23,7 @@ const Home = (props) => {
             navigate('/login')
         }
         
-    },[token])
+    })
     return(
         <div>
             <h1>Home</h1>
