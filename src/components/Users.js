@@ -7,7 +7,7 @@ const Users = (props) =>{
     const navigate = useNavigate()
 
     useEffect(()=>{
-        fetch('/users')
+        fetch('https://delevopment-client-production.up.railway.app/users')
         .then(res => {
             if (res.status===200){
                 return res.json()
@@ -20,7 +20,7 @@ const Users = (props) =>{
         })
         .catch(e=>{
             console.log(e);
-        },[])
+        })
     })
 
     if(users.length === 0) return null

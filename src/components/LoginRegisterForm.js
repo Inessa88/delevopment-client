@@ -18,7 +18,7 @@ const LoginRegisterForm = (props) =>{
     const handleClick = async() => {
         if(props.title === 'Login'){
             try {
-                const response = await axios.post('/login',{
+                const response = await axios.post('https://delevopment-client-production.up.railway.app/login',{
                     email,password
                 },{
                     headers:{
@@ -36,7 +36,7 @@ const LoginRegisterForm = (props) =>{
         }
         else{
             try {
-                const response = await axios.post('/register',{
+                const response = await axios.post('https://delevopment-client-production.up.railway.app/register',{
                     email,password
                 },{
                     headers:{

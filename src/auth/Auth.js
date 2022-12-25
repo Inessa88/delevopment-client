@@ -15,7 +15,7 @@ export const Auth = (props) =>{
         const verify = async() =>{
           
               try{
-                  const response = await axios.get('/token')
+                  const response = await axios.get('https://delevopment-client-production.up.railway.app/token')
 
                   console.log(response.data.token);
                   setToken(response.data.token);

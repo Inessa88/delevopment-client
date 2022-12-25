@@ -13,7 +13,7 @@ const Nav = (props) => {
 
     const logout = async()=>{
         try {
-            const response = await axios.delete('/logout');
+            const response = await axios.delete('https://delevopment-client-production.up.railway.app/logout');
             if(response.status ===200 || response.status===204){
                 navigate('/login')
             }
